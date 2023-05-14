@@ -4,3 +4,24 @@
   margin: 0 auto;
   padding: 0 4rem;
 }
+
+.container-fluid {
+  width: 130rem;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-light);
+}

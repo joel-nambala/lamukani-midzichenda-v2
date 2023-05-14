@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
 :root {
-  --bg-primary: #f7f7f7;
+  --primary-color: #dc2626;
+  --primary-color-light: #ef4444;
+  --primary-color-dark: #b91c1c;
+
+  --text-color: #444;
+  --bg-primary: #f3f4f6;
 }
 
 * {
@@ -15,5 +22,74 @@ html {
 
 body {
   background-color: var(--bg-primary);
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+/* HEADER */
+#header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+.nav-list {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-item {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.6px;
+  border-bottom: 0.3rem transparent var(--primary-color-light);
+  transition: border-color 0.3s;
+}
+
+.nav-link:hover {
+  border-bottom: 0.3rem solid var(--primary-color-light);
+}
+
+.hero-header {
+  padding-top: 10rem;
+  margin-bottom: 1rem;
+}
+
+.hero-main {
+  font-size: 4.8rem;
+  margin-bottom: 0.4rem;
+  display: block;
+  letter-spacing: 0.8rem;
+}
+
+.hero-sub {
+  font-size: 3.6rem;
+  letter-spacing: 0.2rem;
+}
+
+.hero-text {
+  font-size: 1.6rem;
+  width: 50vw;
+  line-height: 1.6;
+  margin-top: 2rem;
+}
+
+.btn-hero {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
