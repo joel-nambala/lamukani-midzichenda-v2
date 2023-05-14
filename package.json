@@ -1,0 +1,15 @@
+{
+  "name": "lamukani-midzichenda-v2",
+  "version": "1.0.0",
+  "description": "A new welafraewebsite with HTML, CSS and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Nambala",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.1.0",
+    "node-sass": "^8.0.0"
+  }
+}
