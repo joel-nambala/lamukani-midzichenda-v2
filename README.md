@@ -4,4 +4,4 @@ A new welfrae association website with HTML, CSS and JavaScript for a non-profit
 
 ## Author Information
 
-This website was created by [Joel Nambala]("https://joelnambala.netlify.app"). Visit the portfolio.
+This website was created by [Joel Nambala](https://joelnambala.netlify.app). Visit the portfolio.
