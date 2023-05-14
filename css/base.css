@@ -8,6 +8,7 @@
 .container-fluid {
   width: 130rem;
   margin: 0 auto;
+  padding: 0 4rem;
 }
 
 .btn {
