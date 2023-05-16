@@ -8,7 +8,7 @@
 .container-fluid {
   width: 130rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 3rem;
 }
 
 .btn {
@@ -25,4 +25,50 @@
 
 .btn:hover {
   background-color: var(--primary-color-light);
+}
+
+.primary-color {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.row {
+  display: grid;
+}
+
+.col-1 {
+  grid-template-columns: 1fr;
+}
+
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.col-5 {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+}
+
+.col-6 {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4rem;
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  opacity: 0;
+  transition: all 0.3s ease;
 }

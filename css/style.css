@@ -35,11 +35,11 @@ body {
   background-position: center;
   color: #fff;
 }
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 0;
 }
 
 .nav-list {
@@ -66,7 +66,7 @@ body {
 }
 
 .hero-header {
-  padding-top: 10rem;
+  padding-top: 6rem;
   margin-bottom: 1rem;
 }
 
@@ -92,4 +92,84 @@ body {
 .btn-hero {
   margin-top: 4rem;
   margin-bottom: 6rem;
+}
+
+/* FEATURES */
+#features {
+  padding: 4rem 0;
+}
+
+.feature-content {
+  width: 100%;
+}
+
+.feature-photo {
+  width: 100%;
+}
+
+.feature-title {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+  text-transform: capitalize;
+}
+
+.feature-sub-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.feature-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.feature-quote {
+  margin-left: 8rem;
+  background-color: #e5e7eb;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-left: 6px solid #9ca3af;
+  border-radius: 6px;
+}
+
+.quote-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.quote-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* CAMPAIGN */
+#campaigns {
+  padding: 6rem 0;
+  background-color: #fff;
+}
+
+.campaigns-title {
+  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+  text-transform: capitalize;
+}
+
+.campaign-img {
+  width: 100%;
+}
+
+.campaign-title {
+  text-transform: capitalize;
+  margin-bottom: 0.6rem;
+  font-size: 1.8rem;
+}
+
+.campaign-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.campaign-details {
+  margin-top: 2rem;
 }
