@@ -1,3 +1,8 @@
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
 /* GLOBAL CLASSES */
 .container {
   max-width: 120rem;
@@ -71,4 +76,16 @@
   right: 4rem;
   opacity: 0;
   transition: all 0.3s ease;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.fixed a {
+  color: var(--text-color);
 }

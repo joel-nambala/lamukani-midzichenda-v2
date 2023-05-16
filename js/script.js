@@ -4,6 +4,20 @@
 const header = document.getElementById('header');
 const featureQuoteContainer = document.querySelector('.feature-quote');
 const btnUp = document.querySelector('.btn-up');
+const copyYear = document.querySelector('.copy-year');
+const nav = document.querySelector('.nav');
+const scrollLinks = document.querySelectorAll('.scroll-link');
+const linksContainer = document.querySelector('.links-container');
+
+// Change copyright year
+const changeCopyrightYear = function () {
+  // Get the present year
+  const today = new Date().getFullYear();
+
+  // Append to the UI
+  copyYear.textContent = today;
+};
+changeCopyrightYear();
 
 // Random quotes
 const randomQuote = async function () {
@@ -42,6 +56,36 @@ const randomQuote = async function () {
 };
 randomQuote();
 
+// Smooth scroll
+scrollLinks.forEach(function (link, i, arr) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // Navigate to a specific spot
+    const id = e.currentTarget.getAttribute('href');
+    const section = document.querySelector(id);
+
+    if (section === null) return;
+
+    // Calculate the heights
+    const navHeight = nav.getBoundingClientRect().height;
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    const fixedNav = nav.classList.contains('fixed');
+
+    let position = section.offsetTop - navHeight;
+
+    if (!fixedNav) position = position - navHeight;
+    if (navHeight > 82) position = position + containerHeight;
+
+    window.scrollTo({
+      top: position,
+      left: 0,
+      behavior: 'smooth',
+    });
+    linksContainer.style.height = 0;
+  });
+});
+
 // Show back to top button
 const showBacktopBtn = function () {
   // Calculate the heights
@@ -49,10 +93,22 @@ const showBacktopBtn = function () {
   const scrollHeight = window.scrollY;
 
   // Manipulate the styles
-  if (scrollHeight > headerHeight) btnUp.style.opacity = 1;
+  if (scrollHeight > headerHeight - 100) btnUp.style.opacity = 1;
   else btnUp.style.opacity = 0;
+};
+
+// Fixed navigation bar
+const fixedNavigation = function () {
+  // Calculate the heights
+  const scrollHeight = window.scrollY;
+  const navHeight = nav.getBoundingClientRect().height;
+
+  // Add the fixed class
+  if (scrollHeight > navHeight) nav.classList.add('fixed');
+  else nav.classList.remove('fixed');
 };
 
 window.addEventListener('scroll', function () {
   showBacktopBtn();
+  fixedNavigation();
 });

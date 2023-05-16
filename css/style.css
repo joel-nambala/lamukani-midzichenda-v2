@@ -17,7 +17,6 @@
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -172,4 +171,55 @@ body {
 
 .campaign-details {
   margin-top: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  padding: 4rem 0 1rem 0;
+  background-color: #57534e;
+  color: #fff;
+}
+
+.footer-title {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-item {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  padding-top: 1rem;
+}
+
+.footer-item:not(:last-child) {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #aaa;
+}
+
+.footer-link {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.copyright-text {
+  text-align: center;
+  color: #bbb;
+  font-size: 1.4rem;
+}
+
+.copyright {
+  margin-top: 3rem;
+}
+
+.copyright-text:not(:last-child) {
+  margin-bottom: 0.8rem;
 }
