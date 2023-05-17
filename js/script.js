@@ -53,7 +53,9 @@ const randomQuote = async function () {
     // Append to the UI
     featureQuoteContainer.insertAdjacentHTML('afterbegin', html);
   } catch (err) {
-    featureQuoteContainer.textContent = `${err.message}`;
+    featureQuoteContainer.textContent = `Please check your internet connection`;
+    featureQuoteContainer.style.color = `#dc2626`;
+    featureQuoteContainer.style.fontSize = `16px`;
   }
 };
 randomQuote();

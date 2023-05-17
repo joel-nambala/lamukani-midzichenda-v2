@@ -39,6 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 3rem;
 }
 
 .nav-list {
@@ -97,6 +98,56 @@ body {
 .btn-hero {
   margin-top: 4rem;
   margin-bottom: 6rem;
+}
+
+/* TRUST */
+#trust {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.trust-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+.trust-heading {
+  font-size: 2.8rem;
+  text-transform: capitalize;
+}
+
+.trust-description {
+  font-size: 1.6rem;
+}
+
+.trust-card {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+
+.trust-icon {
+  align-self: flex-start;
+}
+
+.trust-icon i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.trust-title {
+  font-size: 1.6rem;
+}
+
+.trust-text {
+  grid-column: 2 / 3;
+  font-size: 1.6rem;
+  line-height: 1.4;
 }
 
 /* FEATURES */
@@ -177,6 +228,70 @@ body {
 
 .campaign-details {
   margin-top: 2rem;
+}
+
+/* TEAMS */
+#team {
+  padding: 4rem 0;
+}
+
+.team-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 4rem;
+}
+
+.team-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.team-description {
+  font-size: 1.6rem;
+}
+
+.team-card {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 3rem 2rem;
+}
+
+.team-img {
+  width: 80%;
+  border-radius: 50%;
+  height: auto;
+}
+
+.team-name {
+  font-size: 1.8rem;
+  margin: 2rem 0 0.6rem 0;
+}
+
+.team-position {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+  text-transform: capitalize;
+}
+
+.team-text {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.team-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
 }
 
 /* FOOTER */
