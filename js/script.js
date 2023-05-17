@@ -8,6 +8,8 @@ const copyYear = document.querySelector('.copy-year');
 const nav = document.querySelector('.nav');
 const scrollLinks = document.querySelectorAll('.scroll-link');
 const linksContainer = document.querySelector('.links-container');
+const navBtn = document.querySelector('.nav-btn');
+const navList = document.querySelector('.nav-list');
 
 // Change copyright year
 const changeCopyrightYear = function () {
@@ -82,9 +84,23 @@ scrollLinks.forEach(function (link, i, arr) {
       left: 0,
       behavior: 'smooth',
     });
+
     linksContainer.style.height = 0;
   });
 });
+
+// Responsive navigation
+const responseNavigation = function () {
+  // Calculate the heights
+  const navHeight = navList.getBoundingClientRect().height;
+  const containerHeight = linksContainer.getBoundingClientRect().height;
+
+  // Add the height
+  if (containerHeight === 0) linksContainer.style.height = `${navHeight}px`;
+  else linksContainer.style.height = 0;
+};
+
+navBtn.addEventListener('click', responseNavigation);
 
 // Show back to top button
 const showBacktopBtn = function () {

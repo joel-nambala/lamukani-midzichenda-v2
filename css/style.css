@@ -64,6 +64,12 @@ body {
   border-bottom: 0.3rem solid var(--primary-color-light);
 }
 
+.nav-btn {
+  font-size: 2.2rem;
+  cursor: pointer;
+  display: none;
+}
+
 .hero-header {
   padding-top: 6rem;
   margin-bottom: 1rem;
