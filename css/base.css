@@ -16,6 +16,10 @@
   padding: 3rem;
 }
 
+a:focus {
+  outline: 0.6rem solid var(--primary-color);
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;

@@ -10,9 +10,18 @@ const scrollLinks = document.querySelectorAll('.scroll-link');
 const linksContainer = document.querySelector('.links-container');
 const navBtn = document.querySelector('.nav-btn');
 const navList = document.querySelector('.nav-list');
+const donationAmount = document.querySelectorAll('.donator-amount');
 
 // State variables
 const donations = [3500, 7400, 1200, 5350];
+
+// Number formatter
+const numberFormatter = function (number) {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(number);
+};
 
 // Change copyright year
 const changeCopyrightYear = function () {
@@ -132,4 +141,9 @@ const fixedNavigation = function () {
 window.addEventListener('scroll', function () {
   showBacktopBtn();
   fixedNavigation();
+});
+
+donations.forEach(function (amnt, i) {
+  const donations = donationAmount[i];
+  donations.textContent = numberFormatter(amnt);
 });
