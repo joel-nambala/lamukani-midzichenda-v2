@@ -11,6 +11,9 @@ const linksContainer = document.querySelector('.links-container');
 const navBtn = document.querySelector('.nav-btn');
 const navList = document.querySelector('.nav-list');
 
+// State variables
+const donations = [3500, 7400, 1200, 5350];
+
 // Change copyright year
 const changeCopyrightYear = function () {
   // Get the present year
