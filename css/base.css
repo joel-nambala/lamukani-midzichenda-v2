@@ -119,6 +119,7 @@ a:focus {
   width: 100%;
   z-index: 10;
   backdrop-filter: blur(6px);
+  transition: all 0.4s ease-in;
 }
 
 .donate {
@@ -133,6 +134,7 @@ a:focus {
   border-radius: 4px;
   box-shadow: 0 0 1rem #555;
   margin: 3rem 0;
+  transition: all 0.4s ease-in;
 }
 
 .donate-title {
@@ -176,4 +178,18 @@ a:focus {
 
 .btn-donate {
   margin-top: 3rem;
+}
+
+.hide-modal {
+  opacity: 0;
+  pointer-events: none;
+  visibility: none;
+}
+
+.modal-close-window {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 1.8rem;
+  cursor: pointer;
 }

@@ -11,6 +11,10 @@ const linksContainer = document.querySelector('.links-container');
 const navBtn = document.querySelector('.nav-btn');
 const navList = document.querySelector('.nav-list');
 const donationAmount = document.querySelectorAll('.donator-amount');
+const btnModal = document.querySelectorAll('.btn-modal');
+const modalWindow = document.querySelector('.modal');
+const donateWindow = document.querySelector('.donate');
+const modalClose = document.querySelector('.modal-close-window');
 
 // State variables
 const donations = [3500, 7400, 1200, 5350];
@@ -147,3 +151,27 @@ donations.forEach(function (amnt, i) {
   const donations = donationAmount[i];
   donations.textContent = numberFormatter(amnt);
 });
+
+// Close and open modal
+const openModal = function () {
+  // Manipulates classes
+  modalWindow.classList.remove('hide-modal');
+  donateWindow.classList.remove('hide-modal');
+};
+
+const closeModal = function () {
+  // Manipulates classes
+  modalWindow.classList.add('hide-modal');
+  donateWindow.classList.add('hide-modal');
+};
+
+// Add event listeners
+btnModal.forEach(function (btn, i, arr) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal();
+  });
+});
+
+modalWindow.addEventListener('click', closeModal);
+modalClose.addEventListener('click', closeModal);

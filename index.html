@@ -412,8 +412,9 @@
         </div>
       </div>
     </section>
-    <div class="modal"></div>
-    <div class="donate">
+    <div class="modal hide-modal"></div>
+    <div class="donate hide-modal">
+      <i class="bi bi-x-lg modal-close-window"></i>
       <h2 class="donate-title">Donation details</h2>
       <form class="donate-form">
         <div class="donate-details">
@@ -474,7 +475,7 @@
           ></textarea>
           <p class="donate-details-item">Anonymous donation?</p>
           <label for="anonymous" class="anonymous">
-            <input type="checkbox" />
+            <input type="checkbox" id="anonymous" name="anonymous" />
             <span
               >Check this box to hide your personal info in our donators
               list</span
