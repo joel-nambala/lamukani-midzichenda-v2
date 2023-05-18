@@ -36,11 +36,17 @@ body {
   color: #fff;
 }
 
+.logo-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 1rem 3rem;
 }
 
 .nav-list {
