@@ -361,6 +361,33 @@ body {
   font-weight: 600;
 }
 
+/* CTA */
+#cta {
+  padding: 6rem 0;
+}
+
+.cta-photo {
+  background-image: url(../img/sadchild.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 28rem;
+  width: 100%;
+}
+
+.cta-title {
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.cta-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.btn-cta {
+  margin-top: 3rem;
+}
+
 /* FOOTER */
 .footer {
   padding: 4rem 0 1rem 0;

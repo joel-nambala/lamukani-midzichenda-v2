@@ -18,6 +18,10 @@
     right: 4rem;
   }
 
+  .hero-sub {
+    letter-spacing: 0.1rem;
+  }
+
   .links-container {
     height: 0;
     overflow: hidden;
@@ -41,6 +45,15 @@
 @media only screen and (max-width: 425px) {
   html {
     font-size: 56.25%;
+  }
+
+  .cta-photo {
+    height: 22rem;
+  }
+
+  .secondary-heading {
+    font-size: 2.6rem;
+    text-align: center;
   }
 
   .col-2 {
