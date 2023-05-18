@@ -36,6 +36,11 @@
     margin-left: 0;
   }
 
+  .donate-details {
+    grid-template-columns: 1fr;
+    row-gap: 0.8rem;
+  }
+
   .col-4,
   .col-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -54,6 +59,10 @@
   .secondary-heading {
     font-size: 2.6rem;
     text-align: center;
+  }
+
+  .donate {
+    width: 90vw;
   }
 
   .col-2 {

@@ -412,6 +412,78 @@
         </div>
       </div>
     </section>
+    <div class="modal"></div>
+    <div class="donate">
+      <h2 class="donate-title">Donation details</h2>
+      <form class="donate-form">
+        <div class="donate-details">
+          <p class="donate-details-item">Donation amount</p>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Enter amount"
+            required
+          />
+          <p class="donate-details-item">Payment method</p>
+          <div class="payment-details">
+            <input
+              type="radio"
+              id="online-payment"
+              name="payment"
+              value="Online Payment"
+            />
+            <label for="online-payment" class="online-payment"
+              >Online Payment</label
+            >
+            <input
+              type="radio"
+              id="offline-payment"
+              name="payment"
+              value="Offline Payment"
+            />
+            <label for="offline-payment">Offline Payment</label>
+          </div>
+          <p class="donate-details-item">Recurrence</p>
+          <select
+            name="recurrence"
+            id="reccurence"
+            class="form-control"
+            required
+          >
+            <option value="" disabled>--Select Reccurence--</option>
+            <option value="one-time">One time</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+          <p class="donate-details-item">Campaigns</p>
+          <select name="campaign" id="campaign" class="form-control" required>
+            <option value="" disabled>--Select Campaign--</option>
+            <option value="one-time">Against unemployment</option>
+            <option value="weekly">Proper elderly care</option>
+            <option value="monthly">Sponsor an orphan child</option>
+            <option value="monthly">Child protection program</option>
+            <option value="monthly">Special education opportunites</option>
+          </select>
+          <p class="donate-details-item">Message</p>
+          <textarea
+            name="message"
+            id="message"
+            class="form-control"
+            placeholder="Your custom text"
+            required
+          ></textarea>
+          <p class="donate-details-item">Anonymous donation?</p>
+          <label for="anonymous" class="anonymous">
+            <input type="checkbox" />
+            <span
+              >Check this box to hide your personal info in our donators
+              list</span
+            >
+          </label>
+        </div>
+        <input type="submit" value="Donate" class="btn btn-donate" />
+      </form>
+    </div>
     <a href="#header" class="btn btn-up scroll-link">
       <i class="bi bi-arrow-up"></i>
     </a>
