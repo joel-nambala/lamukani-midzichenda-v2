@@ -5,7 +5,7 @@
   "scripts": {
     "server": "live-server --port=1010",
     "start": "npm-run-all --parallel server",
-    "concat": "concat -o css/style.concat.css css/base.css css/style.css css/queries.css",
+    "concat": "concat -o css/style.concat.css css/base.css css/style.css css/animations.css css/queries.css",
     "prefix": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
     "compress": "node-sass css/style.prefix.css css/style.min.css --output-style compressed",
     "minify:js": "uglifyjs ./js/script.js -c -m -o ./js/script.min.js",
