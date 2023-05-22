@@ -16,6 +16,8 @@ const modalWindow = document.querySelector('.modal');
 const donateWindow = document.querySelector('.donate');
 const modalClose = document.querySelector('.modal-close-window');
 const campaignContainer = document.getElementById('campaign');
+const slides = document.querySelectorAll('.news-slide');
+const dotsContainer = document.querySelector('.dots');
 
 // State variables
 const donations = [3500, 7400, 1200, 5350];
@@ -157,28 +159,32 @@ donations.forEach(function (amnt, i) {
 });
 
 // Close and open modal
-const openModal = function () {
-  // Manipulates classes
-  modalWindow.classList.remove('hide-modal');
-  donateWindow.classList.remove('hide-modal');
-};
+const modalCloseOpen = function () {
+  const openModal = function () {
+    // Manipulates classes
+    modalWindow.classList.remove('hide-modal');
+    donateWindow.classList.remove('hide-modal');
+  };
 
-const closeModal = function () {
-  // Manipulates classes
-  modalWindow.classList.add('hide-modal');
-  donateWindow.classList.add('hide-modal');
-};
+  const closeModal = function () {
+    // Manipulates classes
+    modalWindow.classList.add('hide-modal');
+    donateWindow.classList.add('hide-modal');
+  };
 
-// Add event listeners
-btnModal.forEach(function (btn, i, arr) {
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    openModal();
+  // Add event listeners
+  btnModal.forEach(function (btn, i, arr) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal();
+    });
   });
-});
 
-modalWindow.addEventListener('click', closeModal);
-modalClose.addEventListener('click', closeModal);
+  modalWindow.addEventListener('click', closeModal);
+  modalClose.addEventListener('click', closeModal);
+};
+
+modalCloseOpen();
 
 // Populate the campaigns
 const populateCampaigns = function () {
@@ -186,10 +192,90 @@ const populateCampaigns = function () {
   campaigns.forEach(function (campaign, i, arr) {
     // Generate markup
     const html = `<option value="${campaign}">${campaign}</option>`;
-    console.log(i);
+
     // Append to the UI
     campaignContainer.insertAdjacentHTML('beforeend', html);
   });
 };
 
 populateCampaigns();
+
+// Slider component
+const sliderComponent = function () {
+  let currentSlide = 0;
+  const maxSlide = slides.length;
+
+  // Create dots
+  const createDots = function () {
+    slides.forEach(function (slide, i, arr) {
+      // Generate markup
+      const html = `<button class="dots-dot" data-slide="${i}"></button>`;
+
+      // Append to the UI
+      dotsContainer.insertAdjacentHTML('beforeend', html);
+    });
+  };
+
+  // Activate dot
+  const activateDot = function (slide) {
+    document.querySelectorAll('.dots-dot').forEach(function (dot, i, arr) {
+      dot.classList.remove('dots-dot--active');
+    });
+
+    document
+      .querySelector(`.dots-dot[data-slide="${slide}"]`)
+      .classList.add('dots-dot--active');
+  };
+
+  // Navigate to a slide
+  const goToSlide = function (slide) {
+    slides.forEach(function (s, i, arr) {
+      s.style.transform = `translateX(${(i - slide) * 100}%)`;
+    });
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (currentSlide === maxSlide - 1) currentSlide = 0;
+    else currentSlide++;
+
+    goToSlide(currentSlide);
+    activateDot(currentSlide);
+  };
+
+  // Previous slide
+  const prevSlide = function () {
+    if (currentSlide === 0) currentSlide = maxSlide - 1;
+    else currentSlide--;
+
+    goToSlide(currentSlide);
+    activateDot(currentSlide);
+  };
+
+  // Init function
+  const init = function () {
+    createDots();
+    activateDot(0);
+    goToSlide(0);
+  };
+
+  init();
+
+  // Event handlers
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+
+  dotsContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots-dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+
+  // setInterval(nextSlide, 10000);
+};
+
+sliderComponent();

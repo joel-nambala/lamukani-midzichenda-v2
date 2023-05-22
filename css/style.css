@@ -325,6 +325,165 @@ body {
   font-size: 1.4rem;
 }
 
+/* NEWS */
+#news {
+  padding: 4rem 0;
+}
+
+.news-container {
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2rem;
+}
+
+.news-content-header {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.news-blog {
+  margin-top: 4rem;
+}
+
+.news-blog-header {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  margin-bottom: 0.6rem;
+}
+
+.news-slider-photo {
+  overflow: hidden;
+}
+
+.news-slider-img {
+  width: 100%;
+}
+
+.blog-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-item {
+  font-size: 1.5rem;
+  padding: 0.8rem 0;
+}
+
+.blog-item:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.blog-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.blog-link:hover {
+  color: #999;
+}
+
+.news-slider {
+  position: relative;
+  height: 60rem;
+  overflow: hidden;
+}
+
+.news-slide {
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.8s ease;
+}
+
+.news-slider-title {
+  font-size: 2.4rem;
+  padding: 1rem 1.6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.news-slider-title::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 2.2rem;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.news-slider-details {
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  border-top: 1.7px solid #ccc;
+  border-bottom: 1.7px solid #ccc;
+  font-size: 1.4rem;
+}
+
+.news-slider-details p {
+  text-transform: capitalize;
+}
+
+.news-slider-comments {
+  margin-left: auto;
+}
+
+.news-slider-content {
+  padding: 2rem 1.6rem 3rem 1.6rem;
+}
+
+.news-slider-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 1.4rem;
+}
+
+.text-primary {
+  color: var(--primary-color);
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.text-primary:hover {
+  color: var(--text-color);
+}
+
+.dots {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.dots-dot {
+  /* height: 1rem;
+  width: 1rem;
+  border-radius: 50%; */
+  height: 0.4rem;
+  width: 2.6rem;
+  background-color: #e5e7eb;
+  border: none;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.dots-dot--active {
+  background-color: var(--primary-color);
+}
+
 /* DONATORS */
 #donators {
   padding: 4rem 0;
@@ -392,6 +551,7 @@ body {
 /* CTA */
 #cta {
   padding: 6rem 0;
+  background-color: #fff;
 }
 
 .cta-photo {
