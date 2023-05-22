@@ -15,9 +15,13 @@ const btnModal = document.querySelectorAll('.btn-modal');
 const modalWindow = document.querySelector('.modal');
 const donateWindow = document.querySelector('.donate');
 const modalClose = document.querySelector('.modal-close-window');
+const campaignContainer = document.getElementById('campaign');
 
 // State variables
 const donations = [3500, 7400, 1200, 5350];
+
+// prettier-ignore
+const campaigns = ['Against unemployment', 'Proper elderly care','Special education opportunities', 'Child protection program', 'Sponsor an orphan child'];
 
 // Number formatter
 const numberFormatter = function (number) {
@@ -175,3 +179,17 @@ btnModal.forEach(function (btn, i, arr) {
 
 modalWindow.addEventListener('click', closeModal);
 modalClose.addEventListener('click', closeModal);
+
+// Populate the campaigns
+const populateCampaigns = function () {
+  // Loop over the campaigns
+  campaigns.forEach(function (campaign, i, arr) {
+    // Generate markup
+    const html = `<option value="${campaign}">${campaign}</option>`;
+    console.log(i);
+    // Append to the UI
+    campaignContainer.insertAdjacentHTML('beforeend', html);
+  });
+};
+
+populateCampaigns();

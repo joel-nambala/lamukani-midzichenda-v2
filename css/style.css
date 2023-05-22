@@ -303,6 +303,28 @@ body {
   margin-top: 4rem;
 }
 
+.team-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.team-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.team-link:hover {
+  transform: scale(1.2);
+}
+
+.team-icon {
+  font-size: 1.4rem;
+}
+
 /* DONATORS */
 #donators {
   padding: 4rem 0;
