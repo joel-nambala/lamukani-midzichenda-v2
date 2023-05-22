@@ -41,6 +41,14 @@
     row-gap: 0.8rem;
   }
 
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+
+  .news-slider {
+    height: 56rem;
+  }
+
   .col-4,
   .col-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -63,6 +71,24 @@
 
   .donate {
     width: 90vw;
+  }
+
+  .news-slider {
+    height: 50rem;
+  }
+
+  .news-slider-title {
+    font-size: 2rem;
+  }
+
+  .news-slider-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .news-slider-comments {
+    margin-left: 0;
   }
 
   .col-2 {
@@ -93,5 +119,15 @@
 @media only screen and (min-width: 769px) {
   .links-container {
     height: auto !important;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .news-slider-details {
+    grid-template-columns: 1fr;
+  }
+
+  .dots {
+    bottom: 1%;
   }
 }
