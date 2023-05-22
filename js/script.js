@@ -275,7 +275,7 @@ const sliderComponent = function () {
     }
   });
 
-  // setInterval(nextSlide, 10000);
+  setInterval(nextSlide, 10000);
 };
 
 sliderComponent();
