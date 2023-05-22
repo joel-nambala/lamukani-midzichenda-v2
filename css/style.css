@@ -459,13 +459,13 @@ body {
 
 .dots {
   position: absolute;
-  bottom: 4%;
+  top: 95%;
   left: 50%;
-  z-index: 100;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  z-index: 7;
 }
 
 .dots-dot {
